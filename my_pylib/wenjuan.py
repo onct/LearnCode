@@ -1,5 +1,5 @@
-
-# -*- coding: utf-8 -*-import re
+# one questionnaire automatic fill in wenjuanwang 
+# tools: katalon recoder(chrome EDGE) selenium
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import random
@@ -9,6 +9,9 @@ import time
 def writewj(name, phone):
     driver = webdriver.Edge(r"C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedgedriver.exe")
     # 'https://www.wenjuan.com/s/6VVJZfT/'
+    # driver.execute_script('window.open(url)')
+    # driver.window_handles
+    # driver.switch_to_window(driver.window_handles[])
     driver.get('https://www.wenjuan.top/s/NJ3EvuS')
     # 定位所有的问卷问题
     questions = driver.find_elements_by_css_selector('.matrix')
@@ -48,6 +51,7 @@ def writewj(name, phone):
     # 延迟问卷结果提交时间，以免间隔时间太短而无法提交
     time.sleep(2)
     driver.quit()
+    # driver.close()
 if __name__ == "__main__":
     namelist = u'[[李yan,李现]]'
     phonelist = ['15838319691', '15838329692']

@@ -6,22 +6,23 @@ from time import sleep
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4086.0 Safari/537.36 Edg/83.0.461.1'
+}
 
-    }
+
 def getHTMLText(url):
     try:
         r = requests.get(url, timeout=30)
         r.raise_for_status()
-        r.encoding = r.apparent_encoding
-        return r.textcd 
+        r.encoding = r.apparent_encodingF
+        return r.text # r.json()
     except:
         return ""
 
 
 # get post session
 #session = requests.Session()
-#data = {
-    #'username': 'name',
+# data = {
+    # 'username': 'name',
    # 'password': 'password'}
 #r = session.post('url', data)
 #r = session.get('url')
@@ -35,9 +36,10 @@ def download(requests, url, file_path):
             f.write(chunk)
 
 
-#webdriver chrome
+# webdriver chrome
 driver = webdriver.Chrome()
-print (driver.get('https://www.wenjuan.top/s/NJ3EvuS'))
-#webdriver for edge need let driver to edge(chrouim) file folder
-driver = webdriver.Edge(r"C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedgedriver.exe")
+print(driver.get('https://www.wenjuan.top/s/NJ3EvuS'))
+# webdriver for edge need let driver to edge(chrouim) file folder
+driver = webdriver.Edge(
+    r"C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedgedriver.exe")
 print(driver.get('https://www.wenjuan.top/s/NJ3EvuS'))
