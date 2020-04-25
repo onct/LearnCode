@@ -43,3 +43,8 @@ print(driver.get('https://www.wenjuan.top/s/NJ3EvuS'))
 driver = webdriver.Edge(
     r"C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedgedriver.exe")
 print(driver.get('https://www.wenjuan.top/s/NJ3EvuS'))
+
+# #scrapy shell
+# 1.scrapy startproject name
+# 2.scrapy genspider name domain
+# 3.scrapy genspider -t crawl name domain

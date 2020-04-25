@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/user/main",
+    "pages/instruction/main",
+    "pages/opinion/main",
+    "pages/record/main"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#66ccff",
+    "navigationBarTitleText": "miao",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":"#Ea5149",
+    "list":[
+      {
+        "text":"首页",
+        "pagePath":"pages/index/main",
+        "iconPath":"static/images/首页.png",
+        "selectedIconPath":"static/images/首页 selected.png"
+      },
+      {
+        "text":"记录",
+        "pagePath":"pages/record/main",
+        "iconPath": "static/images/社区 grey.png",
+        "selectedIconPath": "static/images/社区 black.png"
+      },
+      {
+        "text":"我的",
+        "pagePath":"pages/user/main",
+        "iconPath":"static/images/男.png",
+        "selectedIconPath":"static/images/女.png"
+      }
+    ]
+  }
+ 
+}

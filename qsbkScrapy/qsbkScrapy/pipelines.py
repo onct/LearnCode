@@ -7,5 +7,14 @@
 
 
 class QsbkscrapyPipeline(object):
-    def process_item(self, item, spider):
+    def open_spider(self,spider):
+        self.f=open('duanzi.txt','w',encoding='utf-8')
+    def close_spider(self,spider):
+        self.f.close()
+    def process_item(self,item,spider):
+        try:
+            line = str(item)+'\n'
+            self.f.write(line)
+        except:
+            pass
         return item
